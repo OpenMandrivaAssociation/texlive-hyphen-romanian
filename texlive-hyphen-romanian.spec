@@ -1,5 +1,11 @@
+# revision 23092
+# category TLCore
+# catalog-ctan undef
+# catalog-date undef
+# catalog-license undef
+# catalog-version undef
 Name:		texlive-hyphen-romanian
-Version:	20111102
+Version:	20111103
 Release:	1
 Summary:	Romanian hyphenation patterns
 Group:		Publishing
@@ -49,6 +55,7 @@ consider using U+015F and U+0163 as well in the future.
 %_texmf_language_dat_d/hyphen-romanian
 %_texmf_language_def_d/hyphen-romanian
 %_texmf_language_lua_d/hyphen-romanian
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -57,6 +64,8 @@ consider using U+015F and U+0163 as well in the future.
 %build
 
 %install
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-romanian <<EOF
 %% from hyphen-romanian:
