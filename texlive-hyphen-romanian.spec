@@ -47,12 +47,12 @@ consider using U+015F and U+0163 as well in the future.
 %install
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-romanian <<EOF
-%% from hyphen-romanian:
+\%\% from hyphen-romanian:
 romanian loadhyph-ro.tex
 EOF
 mkdir -p %{buildroot}%{_texmf_language_def_d}
 cat > %{buildroot}%{_texmf_language_def_d}/hyphen-romanian <<EOF
-%% from hyphen-romanian:
+\%\% from hyphen-romanian:
 \addlanguage{romanian}{loadhyph-ro.tex}{}{2}{2}
 EOF
 mkdir -p %{buildroot}%{_texmf_language_lua_d}
