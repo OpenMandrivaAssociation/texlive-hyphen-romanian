@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-hyphen-romanian
 Version:	20111103
-Release:	1
+Release:	2
 Summary:	Romanian hyphenation patterns
 Group:		Publishing
 URL:		http://tug.org/texlive
